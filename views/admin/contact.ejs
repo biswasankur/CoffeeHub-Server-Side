@@ -1,0 +1,91 @@
+<%-include('common/head')%>
+  <body id="page-top" >
+
+    <!-- Page Wrapper -->
+    <div id="wrapper" >
+
+        <!-- Sidebar -->
+        <%-include('common/sidebar')%>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <%-include('common/topbar')%>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Contact</h1>
+                       
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Contact DataTables </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Sl.No</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone No</th>
+                                            <th>Message</th>
+
+                                            <th>Contact Time</th>
+                                            
+                                            
+                                        </tr>
+                                    </thead>
+                                   
+                                    <tbody>
+                                        <%let count=1%>
+                                        <%if(displayData.length >0){
+                                            for(let data2 of displayData){%>
+                                        <tr>
+                                            <td><%=count++%></td>
+                                            <td><%=data2.name%></td>
+                                            <td><%=data2.email%></td>
+                                            <td><%=data2.contact%></td>
+                                            <td><%=data2.message%></td>
+                                            <td><%=data2.createdAt.toDateString()%></td>
+                                        </tr>
+                                        <%}}%>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                   
+
+                    <!-- Content Row -->
+                   
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <%-include('common/footer')%>
+            <!-- End of Footer -->
+
+    
+</body>
+</html>
