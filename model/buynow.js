@@ -57,6 +57,7 @@ const BuySchema = new Schema({
         type: Boolean,
         default: true
     },
+    
    
 }, { timestamps: true })
 const BuyModel = new mongoose.model('buyNow', BuySchema);
